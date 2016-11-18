@@ -16,8 +16,32 @@ public class MacroEvent
         _syntax = "({\\w+}-{\\d+(ms)}-)+";
     }
 
-    public void parse()
+    public void compile()
     {
+        parseRegex();
+    }
+
+    public void parseRegex()
+    {
+        //TODO parseEXCEPTION
+        if (_macroString.matches(_syntax))
+        {
+            checkEnum();
+        }
+    }
+
+    private void checkEnum()
+    {
+        if (_macroString.contains(Actions.values()
+            .toString()))
+        {
+            readKeys();
+        }
+    }
+
+    private void readKeys()
+    {
+        // TODO impl
 
     }
 
