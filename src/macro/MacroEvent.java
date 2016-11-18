@@ -1,6 +1,5 @@
 package macro;
 
-//khopf <khopf@KOLJA-DESKTOP.fritz.box>
 public class MacroEvent
 {
     String _name;
