@@ -15,6 +15,7 @@ import javax.swing.border.MatteBorder;
 
 public class RecordAlertDialog
 {
+    String _message;
 
     private JDialog dialog;
 
@@ -25,8 +26,9 @@ public class RecordAlertDialog
     /**
      * Create the dialog.
      */
-    public RecordAlertDialog()
+    public RecordAlertDialog(String message)
     {
+        _message = message;
         initDialog();
     }
 
@@ -68,7 +70,7 @@ public class RecordAlertDialog
         dialog.getContentPane()
             .add(btnNewButton);
 
-        JLabel lblRecordInProgress = new JLabel("Record in progress");
+        JLabel lblRecordInProgress = new JLabel(_message);
         lblRecordInProgress.setFont(new Font("Arimo", Font.BOLD, 16));
         lblRecordInProgress.setForeground(new Color(255, 255, 255));
         lblRecordInProgress.setHorizontalAlignment(SwingConstants.CENTER);
@@ -78,7 +80,7 @@ public class RecordAlertDialog
         dialog.getContentPane()
             .add(lblRecordInProgress);
 
-        JButton btnDone = new JButton("Done");
+        JButton btnDone = new JButton("Ok");
         btnDone.setFont(new Font("Arimo", Font.BOLD, 14));
         btnDone.setForeground(new Color(51, 102, 204));
         btnDone.setBackground(new Color(255, 255, 255));

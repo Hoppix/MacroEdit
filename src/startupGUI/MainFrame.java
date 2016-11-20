@@ -248,7 +248,7 @@ public class MainFrame
         {
             public void actionPerformed(ActionEvent arg0)
             {
-                new RecordAlertDialog();
+                new RecordAlertDialog("debug");
                 //TODO debug
             }
         });
