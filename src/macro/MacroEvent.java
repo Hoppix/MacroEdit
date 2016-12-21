@@ -23,8 +23,8 @@ public class MacroEvent
         _name = name;
         _macroString = macroString;
         _syntax = "({\\w+}-{\\d+(ms)}-)+";
-	       _keyword = "{\c*}";
-         _miliseconds = "{\d*}";
+	    _keyword = "{\c*}";
+        _miliseconds = "{\d*}";
         try
         {
             robot = new Robot();
@@ -54,25 +54,24 @@ public class MacroEvent
         if (_macroString.contains(Actions.values()
             .toString()))
         {
-            readKeys();
+            readKeys(_macroString);
         }
     }
 
     private void readKeys(String recString)
     {
-	if(recString.containts(_keyword)
-	{
-    int start = recString.indexOf("{" + Actions.values);
-		int end = recString.indexOf("}", start);
-		String sub  = recString.subString(start+1, end-1);
-    append(_actions, sub);
-    recString.replaceFirst(_keyword, "");
+        if (recString.contains(_keyword))
+        {
+            int start = recString.indexOf("{" + Actions.values());
+            int end = recString.indexOf("}", start);
+            String sub = recString.substring(start + 1, end - 1);
+            _actions.recString.replaceFirst(_keyword, "");
 
-    start = recString.indexOf("{" + _miliseconds);
-    end = recString.indexOf("}", start);
-    sub = recString.subString(start+1, end-1);
-		readKeys(recString);
-	}
+            start = recString.indexOf("{" + _miliseconds);
+            end = recString.indexOf("}", start);
+            sub = recString.substring(start + 1, end - 1);
+            readKeys(recString);
+        }
     }
 
     public void execute()
