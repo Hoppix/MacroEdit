@@ -28,8 +28,8 @@ public class MacroEvent
         _macroString = macroString;
         _syntax = "({\\w+}-{\\d+(ms)}-)+";
         //TODO regex in Java
-	    _keyword = "{\c*}";
-        _miliseconds = "{\d*}";
+	    _keyword = "{\\w*}";
+        _miliseconds = "{\\d*}";
         try
         {
             robot = new Robot();
