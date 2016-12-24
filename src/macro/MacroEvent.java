@@ -98,6 +98,10 @@ public class MacroEvent
 
     private void convertKeycodes()
     {
+        for (int i = 0; i < _actionsArray.length; i++)
+        {
+            //TODO MAP ENUM
+        }
     }
 
     public void execute()
@@ -109,14 +113,14 @@ public class MacroEvent
     {
         robot.keyPress(keyCode);
         robot.keyRelease(keyCode);
-        robot.delay(delay); // for you to see the keystroke
+        robot.delay(delay);
     }
 
     /** helper method to send a mouse-click to the active application */
     private static void sendMouseClick(int x, int y, int delay)
     {
         robot.mouseMove(x, y);
-        robot.delay(delay); // for you to see the move
+        robot.delay(delay);
         robot.mousePress(InputEvent.BUTTON1_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_MASK);
     }
