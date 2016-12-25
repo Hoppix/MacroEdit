@@ -101,6 +101,16 @@ public class MacroEvent
         for (int i = 0; i < _actionsArray.length; i++)
         {
             //TODO MAP ENUM
+            switch (_actionsArray[i])
+            {
+            case "SPACE":
+                _actionsArray[i] = "VK_SPACE";
+
+                break;
+
+            default:
+                break;
+            }
         }
     }
 
