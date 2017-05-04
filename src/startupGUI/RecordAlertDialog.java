@@ -1,6 +1,7 @@
 package startupGUI;
 
 import java.awt.Color;
+import java.awt.Dialog;
 import java.awt.Font;
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
@@ -38,7 +39,7 @@ public class RecordAlertDialog
         dialog.getContentPane()
             .setBackground(new Color(51, 102, 204));
         //dialog.getContentPane().setSize(new Dimension(200, 100));
-        dialog.setModalityType(dialog.DEFAULT_MODALITY_TYPE);
+        dialog.setModalityType(Dialog.DEFAULT_MODALITY_TYPE);
         dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         dialog.setResizable(false);
         dialog.setSize(250, 130);

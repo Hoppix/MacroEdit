@@ -96,7 +96,8 @@ public class MacroEvent
         }
     }
 
-    private void convertKeycodes()
+    @SuppressWarnings("unused")
+	private void convertKeycodes()
     {
         for (int i = 0; i < _actionsArray.length; i++)
         {
@@ -119,7 +120,8 @@ public class MacroEvent
     }
 
     /** helper method to send the given key to the active application */
-    private static void sendKey(int keyCode, int delay)
+    @SuppressWarnings("unused")
+	private static void sendKey(int keyCode, int delay)
     {
         robot.keyPress(keyCode);
         robot.keyRelease(keyCode);
@@ -127,7 +129,8 @@ public class MacroEvent
     }
 
     /** helper method to send a mouse-click to the active application */
-    private static void sendMouseClick(int x, int y, int delay)
+    @SuppressWarnings("unused")
+	private static void sendMouseClick(int x, int y, int delay)
     {
         robot.mouseMove(x, y);
         robot.delay(delay);

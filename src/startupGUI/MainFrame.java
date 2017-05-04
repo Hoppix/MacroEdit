@@ -4,6 +4,7 @@ import java.awt.Button;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Frame;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.MouseInfo;
@@ -144,7 +145,7 @@ public class MainFrame
         {
             public void actionPerformed(ActionEvent e)
             {
-                frame.setState(frame.ICONIFIED);
+                frame.setState(Frame.ICONIFIED);
             }
         });
     }
